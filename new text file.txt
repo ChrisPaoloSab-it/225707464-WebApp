@@ -1,0 +1,9 @@
+new text file
+
+?????
+
+git clone [filename.git]
+git add
+git commit -m "[comment]"
+git push
+git pull
