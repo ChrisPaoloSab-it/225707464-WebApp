@@ -7,3 +7,8 @@ git add
 git commit -m "[comment]"
 git push
 git pull
+
+17-01-24
+git rm
+git reset
+git checkout
