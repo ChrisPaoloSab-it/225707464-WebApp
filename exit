@@ -1,0 +1,120 @@
+[33mcommit c3619523afcaf855cf0d4b141ab694fb071a21ad[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: ChrisPaoloSab-it <cpaocastillos@gmail.com>
+Date:   Wed Jan 17 15:04:18 2024 +0800
+
+    changed info, educ background format
+
+[33mcommit d6144cfbaab562d8fd7f9c51fa3646a7027101e1[m
+Author: ChrisPaoloSab-it <cpaocastillos@gmail.com>
+Date:   Tue Jan 16 16:55:52 2024 +0800
+
+    changed style in header, removed elements in body
+
+[33mcommit 90fa69016456bad3d1b4e7d5fea09e3d78c418a5[m
+Author: ChrisPaoloSab-it <cpaocastillos@gmail.com>
+Date:   Mon Jan 15 16:55:03 2024 +0800
+
+    font change
+
+[33mcommit 3be0f85299522b79afdb69c0c361bfec4fed361b[m
+Author: ChrisPaoloSab-it <cpaocastillos@gmail.com>
+Date:   Mon Jan 15 16:45:34 2024 +0800
+
+    changed font
+
+[33mcommit 22fdcec33fec7ae04e7732f44959861b823a6168[m
+Author: ChrisPaoloSab-it <cpaocastillos@gmail.com>
+Date:   Mon Jan 15 16:33:57 2024 +0800
+
+    aligned personal info
+
+[33mcommit 4673527e48ce9649fd25378f79ae2104c6787b39[m
+Author: ChrisPaoloSab-it <cpaocastillos@gmail.com>
+Date:   Mon Jan 15 15:58:51 2024 +0800
+
+    removed h2 heading for name, changed to paragraph instead
+
+[33mcommit af05322e04756b2344d33828a17083ea1a40ac94[m
+Author: ChrisPaoloSab-it <cpaocastillos@gmail.com>
+Date:   Mon Jan 15 15:14:51 2024 +0800
+
+    changed colors
+
+[33mcommit af26afd46c788492008b8828bf9d03b5192c78c8[m
+Author: ChrisPaoloSab-it <cpaocastillos@gmail.com>
+Date:   Sun Jan 14 17:20:08 2024 +0800
+
+    made changes, color, info, header and paragraph
+
+[33mcommit 204483a88c9269d8af66a2aa44432ea00b035a7b[m
+Author: 4rcanineyosh <ethanbatario@gmail.com>
+Date:   Fri Jan 12 17:58:03 2024 +0800
+
+    Followed the format, changed values
+
+[33mcommit fcda21fdfa23a8acbf013f807515632a4567de0d[m
+Author: 4rcanineyosh <ethanbatario@gmail.com>
+Date:   Fri Jan 12 17:04:57 2024 +0800
+
+    changed dimensions of images
+
+[33mcommit 6ee6ce06ac56ca8ebbef7fb7cf97ab46f4c3b62d[m
+Author: 4rcanineyosh <ethanbatario@gmail.com>
+Date:   Fri Jan 12 17:02:38 2024 +0800
+
+    renamed intro_prac to RESUME_html
+
+[33mcommit 8bda2ece6f1f3321d7dd5e416ac4b9b115cf74fe[m
+Merge: 6048530 1704999
+Author: 4rcanineyosh <ethanbatario@gmail.com>
+Date:   Fri Jan 12 16:56:30 2024 +0800
+
+    Merge branch 'main' of https://github.com/ChrisPaoloSab-it/225707464WebApp
+
+[33mcommit 6048530182c3d9acdadaa4ff1f83ccb23ec4acee[m
+Author: 4rcanineyosh <ethanbatario@gmail.com>
+Date:   Fri Jan 12 16:56:13 2024 +0800
+
+    lab commit
+
+[33mcommit 1704999fca37a7f83bfeb0824f77daf237453114[m
+Author: ChrisPaoloSab-it <cpaocastillos@gmail.com>
+Date:   Thu Jan 11 21:38:46 2024 +0800
+
+    added images, learned dimensions, and alignment, will continue reading formally tomorrow
+
+[33mcommit 007b749c315237ca152ffbba286798878b8786a8[m
+Author: 4rcanineyosh <ethanbatario@gmail.com>
+Date:   Wed Jan 10 17:27:19 2024 +0800
+
+    push practice
+
+[33mcommit bdba2df54044c33523e76382a7302c8548ca9f71[m
+Author: 4rcanineyosh <ethanbatario@gmail.com>
+Date:   Wed Jan 10 17:16:41 2024 +0800
+
+    save again
+
+[33mcommit a28fb7dde524b16f1ecc6b296d56f22dc2b2b1ee[m
+Author: 4rcanineyosh <ethanbatario@gmail.com>
+Date:   Wed Jan 10 17:07:45 2024 +0800
+
+    practice html
+
+[33mcommit 82e56223f00968100a08f3d31abb27389a9a9158[m
+Author: 4rcanineyosh <ethanbatario@gmail.com>
+Date:   Wed Jan 10 16:37:16 2024 +0800
+
+    added *.exe in gitignore
+
+[33mcommit 8d5cb2029cba700d1749d5d78d7682d9ddea0e0a[m
+Author: 4rcanineyosh <ethanbatario@gmail.com>
+Date:   Wed Jan 10 16:19:38 2024 +0800
+
+    10-JAN
+
+[33mcommit c69c187b015990352370fb4f38ae0a799c911801[m
+Author: ChrisPaoloSab-it <155957027+ChrisPaoloSab-it@users.noreply.github.com>
+Date:   Mon Jan 8 17:10:23 2024 +0800
+
+    Initial commit
