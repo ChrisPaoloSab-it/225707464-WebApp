@@ -8,33 +8,35 @@
     body {
         background-color: whitesmoke;
     }
-    ul {
+    /* ul { */
+a {
         list-style-type: none;
         margin: 0;
         padding: 0;
         width: 100px;
         overflow: hidden;
         background-color: gray;
-    }
+}
+    /* } */
     /* li {
         display: inline;
     } */
     
-    li a {
-        display: block;
+    a {
+        display:inline-block;
         color: black;
-        padding: 18px 16px;
+        padding: 9px 11px;
         text-decoration: none;
         text-align: center;
-    
+        
     }
     
-    li a.active {
+    a.active {
         background-color: darkgreen;
         color: white;
         
     }
-    li a:hover {
+    a:hover {
         background-color: forestgreen;
         color: white;
     }
@@ -43,7 +45,18 @@
         color black;
     } */
     input[type=text], select {
-        width: 20%;
+        width: 40%;
+        margin: 8px;
+        display: inline-block;
+        padding: 9px;
+        border: 2px;
+        border-radius: 4px;
+        box-sizing: border-box;
+        border-style: inset;
+    }
+
+    input[type=password], select {
+        width: 40%;
         margin: 8px;
         display: inline-block;
         padding: 9px;
@@ -78,11 +91,15 @@
 </style>
 </head>
 <body>
-    <ul>
-        <li><a class="active" href="#">Home</a></li>
+    <!-- <ul> -->
+        <!-- <li><a class="active" href="#">Home</a></li>
         <li><a href="#">About us</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
+        <li><a href="#">Contact</a></li> -->
+
+        <a class="active" href="#">Home</a>
+        <a href="#">About us</a>
+        <a href="#">Contact</a>
+    <!-- </ul> -->
     <hr>
     <img src="https://th.bing.com/th/id/OIP.VdEyljjfPrQOtdgdZ2MXIgHaEK?rs=1&pid=ImgDetMain" alt="duck">
     <hr>
@@ -92,7 +109,7 @@
         <input type="text" id="uname" name="username" placeholder="enter your username..."></form>
 
         <form><label for="password">Password:</label>
-        <input type="text" id="password" name="password" placeholder="enter your password..."> </form>
+        <input type="password" id="password" name="password" placeholder="enter your password..."> </form>
 
         <p>Select your gender:</p>
         <input type="radio" id="male" name="gender" value="Male">
