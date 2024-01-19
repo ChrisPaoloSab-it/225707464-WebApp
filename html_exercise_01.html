@@ -8,7 +8,7 @@
     body {
         background-color: whitesmoke;
     }
-    /* ul { */
+   
 a {
         list-style-type: none;
         margin: 0;
@@ -17,10 +17,6 @@ a {
         overflow: hidden;
         background-color: gray;
 }
-    /* } */
-    /* li {
-        display: inline;
-    } */
     
     a {
         display:inline-block;
@@ -32,20 +28,17 @@ a {
     }
     
     a.active {
-        background-color: darkgreen;
-        color: white;
+        background-color: forestgreen;
+        color: black;
         
     }
     a:hover {
-        background-color: forestgreen;
+        background-color: green;
         color: white;
     }
-    /* li a:hover:not(.active) {
-        background-color: greenyellow
-        color black;
-    } */
+   
     input[type=text], select {
-        width: 40%;
+        width: 25%;
         margin: 8px;
         display: inline-block;
         padding: 9px;
@@ -56,7 +49,7 @@ a {
     }
 
     input[type=password], select {
-        width: 40%;
+        width: 25%;
         margin: 8px;
         display: inline-block;
         padding: 9px;
@@ -67,7 +60,6 @@ a {
     }
 
     input[type=submit] {
-        width: 30%;
         background-color:gray;
         color: black;
         padding: 10px 20px;
@@ -81,30 +73,26 @@ a {
         color: white;
         font-weight: bold;
     }
-    /* div {
-        width: 60%;
-        border-radius: 5px;
-        background-color: lightgray;
-        padding: 4px;
-    } */
+   table, th, td {
+    border:1px solid black
+   }
+    
     
 </style>
 </head>
 <body>
-    <!-- <ul> -->
-        <!-- <li><a class="active" href="#">Home</a></li>
-        <li><a href="#">About us</a></li>
-        <li><a href="#">Contact</a></li> -->
 
+<nav>
         <a class="active" href="#">Home</a>
         <a href="#">About us</a>
         <a href="#">Contact</a>
-    <!-- </ul> -->
+    </nav>
+    
     <hr>
     <img src="https://th.bing.com/th/id/OIP.VdEyljjfPrQOtdgdZ2MXIgHaEK?rs=1&pid=ImgDetMain" alt="duck">
     <hr>
-    <h4>Form</h4>
-    <!-- <div> -->
+    <p style="font-weight:bold;">Form</p>
+   
         <form><label for="uname">Username:</label>
         <input type="text" id="uname" name="username" placeholder="enter your username..."></form>
 
@@ -121,9 +109,28 @@ a {
         <br><input type="checkbox" name="terms" id="tnc">
         <label for="tnc">I accept the terms and conditions</label>
 
-        <br><input type="submit" value="SUBMIT"><hr>
+        <br><input type="submit" value="SUBMIT">
+        <hr>
+        <p style="font-weight: bold;">Table</p>
+        <table style="width:30%; text-align: center;">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+            <tr>
+            <td>John</td>
+            <td>25</td>
+            <td>New York</td>
+        </tr>
+        <tr>
+            <td>Jane</td>
+            <td>30</td>
+            <td>Los Angeles</td>
+        </tr>
+        </table>
+        <hr>
 
-    <!-- </div> -->
     
 
 </body>
