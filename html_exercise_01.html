@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html_exercise</title>
+<style>
+    body {
+        background-color: whitesmoke;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100px;
+        overflow: hidden;
+        background-color: gray;
+    }
+    /* li {
+        display: inline;
+    } */
+    
+    li a {
+        display: block;
+        color: black;
+        padding: 18px 16px;
+        text-decoration: none;
+        text-align: center;
+    
+    }
+    
+    li a.active {
+        background-color: darkgreen;
+        color: white;
+        
+    }
+    li a:hover {
+        background-color: forestgreen;
+        color: white;
+    }
+    /* li a:hover:not(.active) {
+        background-color: greenyellow
+        color black;
+    } */
+    input[type=text], select {
+        width: 20%;
+        margin: 8px;
+        display: inline-block;
+        padding: 9px;
+        border: 2px;
+        border-radius: 4px;
+        box-sizing: border-box;
+        border-style: inset;
+    }
+
+    input[type=submit] {
+        width: 30%;
+        background-color:gray;
+        color: black;
+        padding: 10px 20px;
+        margin: 8px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    input[type=submit]:hover {
+        background-color: forestgreen;
+        color: white;
+        font-weight: bold;
+    }
+    /* div {
+        width: 60%;
+        border-radius: 5px;
+        background-color: lightgray;
+        padding: 4px;
+    } */
+    
+</style>
+</head>
+<body>
+    <ul>
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <hr>
+    <img src="https://th.bing.com/th/id/OIP.VdEyljjfPrQOtdgdZ2MXIgHaEK?rs=1&pid=ImgDetMain" alt="???">
+    <hr>
+    <h4>Form</h4>
+    <!-- <div> -->
+        <form><label for="uname">Username:</label>
+        <input type="text" id="uname" name="username" placeholder="enter your username..."></form>
+
+        <form><label for="password">Password:</label>
+        <input type="text" id="password" name="password" placeholder="enter your password..."> </form>
+
+        <p>Select your gender:</p>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label><br>
+
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label><br>
+
+        <br><input type="checkbox" name="terms" id="tnc">
+        <label for="tnc">I accept the terms and conditions</label>
+
+        <br><input type="submit" value="SUBMIT"><hr>
+
+    <!-- </div> -->
+    
+
+</body>
+</html>
