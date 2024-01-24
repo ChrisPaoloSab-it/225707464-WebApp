@@ -103,25 +103,25 @@
 
 
     <form>
+        <div>
+            <label for="uname">Username:</label>
+            <input type="text" id="uname" name="username" placeholder="enter your username..." required>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="enter your password..." required>
 
-        <label for="uname">Username:</label>
-        <input type="text" id="uname" name="username" placeholder="enter your username..." required>
-        <br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" placeholder="enter your password..." required>
+            <p>Select your gender:</p>
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male">Male</label><br>
 
-        <p>Select your gender:</p>
-        <input type="radio" id="male" name="gender" value="Male">
-        <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label><br>
 
-        <input type="radio" id="female" name="gender" value="Female">
-        <label for="female">Female</label><br>
+            <br><input type="checkbox" name="terms" id="tnc">
+            <label for="tnc">I accept the terms and conditions</label>
 
-        <br><input type="checkbox" name="terms" id="tnc">
-        <label for="tnc">I accept the terms and conditions</label>
-
-        <br><input type="submit" value="SUBMIT">
-
+            <br><input type="submit" value="SUBMIT">
+        </div>
     </form>
 
 
@@ -151,7 +151,7 @@
     </audio>
     <hr>
     <h5>Video</h5>
-    <video controls autoplay width="300" height="150">
+    <video controls autoplay loop width="300" height="150">
         <source src="peaceyo.mp4">
     </video>
 
