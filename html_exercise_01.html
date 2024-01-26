@@ -13,19 +13,14 @@
         a {
             list-style-type: none;
             margin: 0;
-            padding: 0;
-            width: 100px;
+            padding: 9px 11px;
+            width: 60px;
             overflow: hidden;
-            background-color: gray;
-        }
-
-        a {
+            background-color: grey;
             display: inline-block;
             color: black;
-            padding: 9px 11px;
-            text-decoration: none;
             text-align: center;
-
+            text-decoration: none;
         }
 
         a.active {
@@ -96,19 +91,20 @@
         </nav>
     </header>
     <hr>
-
-    <img src="https://th.bing.com/th/id/OIP.VdEyljjfPrQOtdgdZ2MXIgHaEK?rs=1&pid=ImgDetMain" alt="duck">
+    <p style="font-weight: bold;">Image</p>
+    <img src="https://th.bing.com/th/id/OIP.VdEyljjfPrQOtdgdZ2MXIgHaEK?rs=1&pid=ImgDetMain" alt="duck" width="300">
     <hr>
     <p style="font-weight:bold;">Form</p>
     <form>
         <div>
-            <label for="uname">Username:</label>
-            <input type="text" id="uname" name="username" placeholder="enter your username..." required>
+            <label for="uname" style="font-weight: bold;">Username:</label>
+            <input type="text" id="uname" name="username" placeholder="enter your username..." required minlength="8">
             <br>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" placeholder="enter your password..." required>
+            <label for="password" style="font-weight: bold;">Password:</label>
+            <input type="password" id="password" name="password" placeholder="enter your password..." required
+                minlength="8">
 
-            <p>Select your gender:</p>
+            <p style="font-weight: bold;">Select your gender:</p>
             <input type="radio" id="male" name="gender" value="Male">
             <label for="male">Male</label><br>
 
@@ -116,7 +112,7 @@
             <label for="female">Female</label><br>
 
             <br><input type="checkbox" name="terms" id="tnc">
-            <label for="tnc">I accept the terms and conditions</label>
+            <label for="tnc" style="font-weight: bold;">I accept the terms and conditions.</label>
 
             <br><input type="submit" value="SUBMIT">
         </div>
