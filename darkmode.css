@@ -1,11 +1,17 @@
-body {
-    background-color: black;
-    color: white;
-}
-h1 {
-    color: white;
-}
+    /* body {
+        background-color: black;
+        color: white;
+    }
 
-hr {
-    color: lightgreen;
-}
+    h1 {
+        color: white;
+    }
+
+    hr {
+        color: lightgreen;
+    } */
+
+    .mode {
+        background-color: black;
+        color: whitesmoke;
+    }
