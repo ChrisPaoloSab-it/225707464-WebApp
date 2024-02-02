@@ -8,30 +8,39 @@
     <link rel="stylesheet" href="lightmode.css">
 
 </head>
+<script>document.getElementsByTagName('div')[0].focus();
+</script>
 
 <body>
     <div class="topnav">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a href="#end">End</a>
+        <a tabindex="1" href="#home">Home</a>
+        <a tabindex="2" href="#about">About</a>
+        <a tabindex="3" href="#contact">Contact</a>
+        <a tabindex="4" href="#end">End</a>
     </div>
+    <h4 id="home">Welcome</h4>
     <hr>
-    <p>A simple <abbr title="HyperText Markup Language">HTML</abbr> exercise.</p>
-    <img width="70%" src="SumeruCropped.jpg" alt="banner">
+    <p>A simple <abbr tabindex="5" title="HyperText Markup Language">HTML</abbr> exercise.</p>
+    <img width="100%" src="SumeruCropped.jpg" alt="banner">
     <hr>
     <p>Javascript</p>
-    <button type="button" onclick="document.getElementById('time').innerHTML = Date()">
+    <button tabindex="6" type="button" onclick="document.getElementById('time').innerHTML = Date()">
         Click to view date and time
     </button>
     <p id="time" style="color: darkred;"></p>
     <hr>
-    <h3 id="#about">About</h3>
-    <p>This html exercise is for CC14.</p>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa asperiores temporibus delectus eos ad natus
+    <h4 id="about">About</h4>
+    <p>This html exercise is for CC14. <br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa asperiores
+        temporibus delectus eos ad natus
         eveniet dolores! Aspernatur optio at beatae aperiam vel natus consequuntur voluptatem soluta ipsum? Esse, quasi.
     </p>
 
+    <h4 id="contact">Contact</h4>
+    <p>This is paragraph to display contacts. <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto rem
+        consequuntur vero recusandae nulla, tenetur hic aut nam similique ea dicta porro reprehenderit? Illum,
+        dignissimos molestias enim rerum sapiente atque.</p>
+<hr>
+<a tabindex="7" id="home" href="#home">Top</a>
 </body>
 
 </html>
