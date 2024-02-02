@@ -1,5 +1,6 @@
 //a simple js feature
 
 function dark(mode) {
-    mode.dark.add('darkside');
+    // mode.dark.add('darkside');
+    src = "css.css";
 }

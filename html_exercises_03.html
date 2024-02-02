@@ -5,24 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Exercises 03</title>
-    <!-- <link rel="stylesheet" href="lightmode.css"> -->
-    
+    <link rel="stylesheet" href="lightmode.css">
+
 </head>
 
 <body>
-    <nav>
-        <a href="/home">Home</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-    </nav>
+    <div class="topnav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#end">End</a>
+    </div>
     <hr>
     <p>A simple <abbr title="HyperText Markup Language">HTML</abbr> exercise.</p>
-    <img width="100px" height="100px" src="gndm.png" alt="pixel gundam">
-
-    <br><button type="button" onclick="dark(mode)">
-        Dark Mode
+    <img width="70%" src="SumeruCropped.jpg" alt="banner">
+    <hr>
+    <p>Javascript</p>
+    <button type="button" onclick="document.getElementById('time').innerHTML = Date()">
+        Click to view date and time
     </button>
-    <script src="darkmode.css"></script>
+    <p id="time" style="color: darkred;"></p>
+    <hr>
+    <h3 id="#about">About</h3>
+    <p>This html exercise is for CC14.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa asperiores temporibus delectus eos ad natus
+        eveniet dolores! Aspernatur optio at beatae aperiam vel natus consequuntur voluptatem soluta ipsum? Esse, quasi.
+    </p>
+
 </body>
 
 </html>

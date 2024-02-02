@@ -1,4 +1,4 @@
-    /* body {
+    body {
         background-color: black;
         color: white;
     }
@@ -7,11 +7,13 @@
         color: white;
     }
 
-    hr {
-        color: lightgreen;
-    } */
+    a {
+        background-color: white;
+        color: black;
+        inline-size: auto;
+    }
 
-    .mode {
+    /* .mode {
         background-color: black;
         color: whitesmoke;
-    }
+    } */
