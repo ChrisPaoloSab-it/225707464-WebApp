@@ -20,11 +20,23 @@
     </div>
     <h4 id="home">Welcome</h4>
     <hr>
-    <p>A simple <abbr tabindex="5" title="HyperText Markup Language">HTML</abbr> exercise.</p>
+    <form>
+        <div>
+            <label for="username" , style="font-weight: bold;">Username:</label>
+            <input tabindex="5" type="text" name="username" id="uname" placeholder="Enter your username" required minlength="8" maxlength="15">
+            <br>
+            <label for="password", style="font-weight: bold;">Password:</label>
+            <input tabindex="6" type="password" name="password" id="password", placeholder="Password..." minlength="8">
+        <br>
+        <input tabindex="7" type="checkbox" name="gender" id="gender">
+        </div>
+    </form>
+    <hr>
+    <p>A simple <abbr tabindex="8" title="HyperText Markup Language">HTML</abbr> exercise.</p>
     <img width="100%" src="Media\SumeruCropped.jpg" alt="banner">
     <hr>
     <p>Javascript</p>
-    <button tabindex="6" type="button" onclick="document.getElementById('time').innerHTML = Date()">
+    <button tabindex="9" type="button" onclick="document.getElementById('time').innerHTML = Date()">
         View Date and Time
     </button>
     <p id="time" style="color: darkred;"></p>
@@ -39,11 +51,11 @@
     <p>This is a paragraph to display contacts. <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto rem
         consequuntur vero recusandae nulla, tenetur hic aut nam similique ea dicta porro reprehenderit? Illum,
         dignissimos molestias enim rerum sapiente atque.</p>
-<hr>
-<a tabindex="7" id="home" href="#home">Top</a>
-<footer>
-    <p>&copy; 2024</p>
-</footer>
+    <hr>
+    <a tabindex="7" id="home" href="#home">Top</a>
+    <footer>
+        <p>&copy; 2024</p>
+    </footer>
 </body>
 
 </html>
