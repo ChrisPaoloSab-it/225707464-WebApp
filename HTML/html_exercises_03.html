@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="CSS/lightmode.css">
 
 </head>
-<script>document.getElementsByTagName('div')[0].focus();
+<script>
 </script>
 
 <body>
@@ -23,22 +23,31 @@
     <form>
         <div>
             <label for="username" , style="font-weight: bold;">Username:</label>
-            <input tabindex="5" type="text" name="username" id="uname" placeholder="Enter your username" required minlength="8" maxlength="15">
+            <input tabindex="5" type="text" name="username" id="uname" placeholder="Enter your username" required
+                minlength="8" maxlength="15">
             <br>
-            <label for="password", style="font-weight: bold;">Password:</label>
-            <input tabindex="6" type="password" name="password" id="password", placeholder="Password..." minlength="8">
-        <br>
-        <input tabindex="7" type="checkbox" name="gender" id="gender">
+            <label for="password" , style="font-weight: bold;">Password:</label>
+            <input tabindex="6" type="password" name="password" id="password" , placeholder="Password..." minlength="8">
+            <br>
+            <p>Select your gender:</p>
+            <input tabindex="7" type="radio" name="gender" value="male">
+            <label for="male">Male</label>
+
+            <input tabindex="8" type="radio" name="gender" value="female">
+            <label for="female">Female</label>
+
+            <br><input type="submit">
         </div>
     </form>
     <hr>
-    <p>A simple <abbr tabindex="8" title="HyperText Markup Language">HTML</abbr> exercise.</p>
-    <img width="100%" src="Media\SumeruCropped.jpg" alt="banner">
+    <p>A simple <abbr tabindex="9" title="HyperText Markup Language">HTML</abbr> exercise.</p>
+    <img width="100%" src="HTML\Media\SumeruCropped.jpg" alt="banner">
     <hr>
     <p>Javascript</p>
-    <button tabindex="9" type="button" onclick="document.getElementById('time').innerHTML = Date()">
+    <!-- <button tabindex="10" type="button" onclick="document.getElementById('time').innerHTML = Date()">
         View Date and Time
-    </button>
+    </button> -->
+    <script src=""></script>
     <p id="time" style="color: darkred;"></p>
     <hr>
     <h4 id="about">About</h4>
@@ -52,7 +61,7 @@
         consequuntur vero recusandae nulla, tenetur hic aut nam similique ea dicta porro reprehenderit? Illum,
         dignissimos molestias enim rerum sapiente atque.</p>
     <hr>
-    <a tabindex="7" id="home" href="#home">Top</a>
+    <a tabindex="11" id="home" href="#home">Top</a>
     <footer>
         <p>&copy; 2024</p>
     </footer>
