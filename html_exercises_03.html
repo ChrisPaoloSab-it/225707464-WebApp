@@ -20,26 +20,37 @@
     <hr>
     <form>
         <div>
-            <label for="username" , style="font-weight: bold;">Username:</label>
+            <p><b>Registration</b></p>
+            <label for="username" , style="font-weight: bold;">Username:</label><br>
             <input tabindex="5" type="text" name="username" id="uname" placeholder="Enter your username" required
                 minlength="8" maxlength="15">
             <br>
-            <label for="password" , style="font-weight: bold;">Password:</label>
-            <input tabindex="6" type="password" name="password" id="password" , placeholder="Password..." minlength="8">
+            <label for="password" , style="font-weight: bold;">Password:</label><br>
+            <input tabindex="6" type="password" name="password" id="password" , placeholder="Password..." required
+                minlength="8">
             <br>
-            <p>Select your gender:</p>
-            <input tabindex="7" type="radio" name="gender" value="male">
+            <label for="email", style="font-weight: bold;">Email:</label><br>
+            <input tabindex="7" type="email" name="email" id="email", placeholder="Email address...">
+            <br>
+            <label for="number" , style="font-weight: bold;">Age:</label><br>
+            <input tabindex="8" type="number" name="age" id="age", placeholder="Age..." required min="1" max="100">
+            <br>
+            <label for="dob" style="font-weight: bold;">Birthday:</label><br>
+            <input tabindex="9" type="date" name="dob" id="dob">
+            <br>
+            <p><b>Select your gender:</b></p>
+            <input tabindex="10" type="radio" name="gender" value="male">
             <label for="male">Male</label>
 
-            <input tabindex="8" type="radio" name="gender" value="female">
+            <input tabindex="11" type="radio" name="gender" value="female">
             <label for="female">Female</label>
 
-            <br><input type="submit">
+            <br><input tabindex="12" type="submit">
         </div>
     </form>
     <hr>
-    <p>A simple <abbr tabindex="9" title="HyperText Markup Language">HTML</abbr> exercise.</p>
-    
+    <p>A simple <abbr tabindex="13" title="HyperText Markup Language">HTML</abbr> exercise.</p>
+
     <img width="100%" src="Media\SumeruCropped.jpg" alt="banner">
     <hr>
     <p><b>Javascript</b></p>
@@ -57,7 +68,22 @@
         consequuntur vero recusandae nulla, tenetur hic aut nam similique ea dicta porro reprehenderit? Illum,
         dignissimos molestias enim rerum sapiente atque.</p>
     <hr>
-    <a tabindex="11" id="home" href="#home">Top</a>
+    <h4>iframes and embed</h4>
+    <p><b>Google Map</b></p>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d501726.54073155!2d106.36556344176306!3d10.75461813192994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529292e8d3dd1%3A0xf15f5aad773c112b!2sHo%20Chi%20Minh%20City%2C%20Vietnam!5e0!3m2!1sen!2sph!4v1707970693626!5m2!1sen!2sph"
+        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <p>Ho Chi Minh City, Vietnam</p>
+    <hr>
+    <p><b>SocMed feed</b></p>
+    <iframe
+        src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FGameSpot%2Fposts%2Fpfbid033jzCoVCfSJbf3cCkaBZT6SUfdhXciXhU1GEyQxA86ixwCypufCWpNRKgxAkRhMqjl&show_text=true&width=500"
+        width="500" height="609" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+        allowfullscreen="true"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+    <hr>
+    <a tabindex="15" id="home" href="#home">Top</a>
     <footer>
         <p>&copy; 2024</p>
     </footer>
