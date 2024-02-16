@@ -1,5 +1,5 @@
 // alert when page loads
-window.onload = function () {
+window.onclick = function () {
     alert("WELCOME!!!!");
 }
 

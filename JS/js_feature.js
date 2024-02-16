@@ -1,6 +1,12 @@
 //a simple js feature
 
-function dark(mode) {
-    // mode.dark.add('darkside');
-    src = "css.css";
+window.onclick = function () {
+    alert("This is an external JS");
+}
+
+//handling a button click?
+function displayMessage() {
+    var message = "Button clicked!";
+    console.log(message);
+    alert(message)
 }
