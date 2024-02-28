@@ -1,6 +1,6 @@
 //a simple js feature
 
-window.onclick = function () {
+window.onload = function () {
     alert("This is an external JS");
 }
 

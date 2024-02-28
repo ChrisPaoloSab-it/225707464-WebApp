@@ -3,10 +3,15 @@ body {
     background-color: rgb 229,228,215;
 }
 
-h4 {
+h1, h2 {
     color: rgb(254, 252, 215);
     background-color: rgb(44, 103, 0);
     padding: 15px;
+}
+
+h3 {
+    color: black;
+    padding: 5px;
 }
 
 a {
