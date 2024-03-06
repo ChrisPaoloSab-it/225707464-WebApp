@@ -1,0 +1,44 @@
+h1,h2 {
+    background-color: hsl(18, 80%, 15%);
+    color: white;
+    font-size: xx-large;
+    text-align: center;
+}
+
+body {
+    display: inline-block;
+    background-color: hsl(50, 80%, 85%);
+}
+
+.red {
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(250, 32, 10);
+    font-weight: bold;
+}
+
+.blue {
+    color: rgb(0, 0, 255);
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(200,0,32,25%);
+    text-align: center;
+}
+
+.new {
+    margin: 10%;
+}
+
+.chunky {
+    align-items: right;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    background-color: #04447c;
+    color: #ffffff;
+    font-weight: bolder;
+    text-align: center;
+    
+}
