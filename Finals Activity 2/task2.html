@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes</title>
+</head>
+
+<body>
+    <style type="text/css">
+        .background {
+            background: radial-gradient(rgba(200,200,200,1),rgba(150,150,250,.7),rgba(20,20,250,.9));
+            border-top-left-radius: 90%;
+            border-top-right-radius: 90%;
+        }
+        .head {
+            padding: 10px;
+            background: linear-gradient(rgb(222, 222, 222), rgb(121, 121, 121), rgb(57, 57, 57));
+            border-top-left-radius: 90%;
+            border-top-right-radius: 90%;
+            border-bottom-right-radius: 50%;
+            border-bottom-left-radius: 50%;
+            height: 300px;
+            width: 300px;
+            margin-left: 150px;
+        }
+
+        .eyeball {
+            background: radial-gradient(rgba(200,200,200,.9),rgba(245,245,245,0.4),rgba(200,10,10,.2),rgba(255,255,255,1));
+            border-radius: 100%;
+            height: 60px;
+            width: 60px;
+            padding: 15px;
+            margin-left:150px;
+            box-shadow: 0px 9px rgba(100,100,100,1);
+        }
+
+        .pupil {
+            color: black;
+            display: inline-block;
+            font-size: 105px;
+            margin-left: 10px;
+            margin-top: -20px;
+        }
+
+        .beak {
+            color:transparent;
+            font-size:80px;
+            border-style:dotted ;
+            margin-left: 250px;
+            border-top-right-radius: 100%;
+            border-bottom-right-radius: 20%;
+            border-bottom-left-radius: 15%;
+            border-top-left-radius: 30%;
+            padding-left:120px;
+            position: absolute;
+            background-color: orange;
+        }
+
+        .body {
+            background: linear-gradient(rgba(240,240,240,1),rgba(100,100,100,1),rgba(120,120,120,1));
+            border-top-left-radius: 40%;
+            border-top-right-radius: 30%;
+            border-bottom-left-radius: 10%;
+            border-bottom-right-radius: 10%;
+            height: 650px;
+            width: 100px;
+            padding-left: 200px;
+            padding-right: 200px;
+
+        }
+
+        .wing {
+            color: transparent;
+            background: linear-gradient(transparent, rgba(20,20,20,1), rgba(5,5,5,1));
+            border-top-left-radius: 60%;
+            border-top-right-radius: 60%;
+            border-bottom-left-radius: 80%;
+            border-bottom-right-radius: 80%;
+            padding-bottom: 400px;
+            padding-right: 100px;
+            padding-left: 100px;
+            
+        }
+
+        .drumstick {
+            color:transparent;
+            display: inline-block;
+            height: 30px;
+            width: 80px;
+            margin-top: -10px;
+            margin-left: 120px;
+            background: linear-gradient(rgb(220,100,0),rgb(220, 120, 20),rgba(220,120,0,1));
+            border-radius: 20%;
+            
+        }
+
+        .drumstick-right {
+            color: rgba(250, 200, 0, 0);
+            display: inline-block;
+        }
+    </style>
+
+    <div class="canvas background">
+        <div class="air background"></div>
+        <div class="head">
+            <div class="eyeball">
+                <span class="pupil">&middot;</span>
+            </div>
+            <div class="beak">
+                <strong>&gt;</strong>
+            </div>
+        </div>
+        <div class="body">
+            <div class="wing">
+                <strong>&lt;
+                </strong>
+            </div>
+        </div>
+        <div class="drumsticks">
+            <div class="drumstick">|
+                <br>/|
+            </div>
+            <div class="drumstick drumstick-right">|
+                <br>/|
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
