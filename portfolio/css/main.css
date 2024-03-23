@@ -708,7 +708,7 @@ button.button-primary:focus,
 input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
-	background: #1f1f1f;
+	background: #070;
 }
 button.full-width, .button.full-width {
 	width: 100%;
@@ -963,7 +963,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	line-height: 2.4rem;
 }
 .skill-bars li .progress {
-	background: #313131;
+	background: #080;
 	position: relative;
 	height: 100%;
 }
@@ -976,7 +976,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	color: white;
 	font-size: 1.1rem;
 	line-height: 1;
-	background: #313131;
+	background: #060;
 	padding: .6rem .6rem;
 	border-radius: 3px;
 }
@@ -987,7 +987,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	margin-left: -5px;
 	border-right: 5px solid transparent;
 	border-left: 5px solid transparent;
-	border-top: 5px solid #313131;
+	border-top: 5px solid #060;
 	content: "";
 }
 
@@ -1119,7 +1119,7 @@ header .logo a {
 	color: transparent;
 	width: 92px;
 	height: 15px;
-	background: url("../images/logo.jpg") no-repeat center;
+	background: url("../images/pandaeyes.png") no-repeat center;
 	background-size: 92px 15px;
 }
 
@@ -1416,7 +1416,7 @@ header .logo a {
 	color: #FFFFFF;
 }
 .intro-social li a:hover, .intro-social li a:focus {
-	color: #cc005f;
+	color: #10ee00;
 }
 
 /**
