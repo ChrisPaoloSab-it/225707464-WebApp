@@ -429,7 +429,7 @@ img.pull-left {
 	display: none;
 }
 .pace .pace-progress {
-	background: #FF0077;
+	background: #0a0;
 	position: fixed;
 	z-index: 900;
 	top: 0;
@@ -472,7 +472,7 @@ img.pull-left {
 	border-top: 11px solid rgba(255, 255, 255, 0.1);
 	border-right: 11px solid rgba(255, 255, 255, 0.1);
 	border-bottom: 11px solid rgba(255, 255, 255, 0.1);
-	border-left: 11px solid #FF0077;
+	border-left: 11px solid #0a0;
 	-webkit-animation: load 1.1s infinite linear;
 	animation: load 1.1s infinite linear;
 	display: block;
@@ -594,8 +594,8 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-	color: #cc005f;
-	border-bottom: 1px solid #FF0077;
+	color: #060;
+	border-bottom: 1px solid #0b0;
 }
 label, legend {
 	font-family: "poppins-bold", sans-serif;
@@ -1344,7 +1344,7 @@ header .logo a {
 	margin-bottom: 0;
 	text-transform: uppercase;
 	letter-spacing: .3rem;
-	text-shadow: 0 0 5px #0f0, 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px;
+	text-shadow: 0 0 5px #0f0, 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px, 0 0 35px #0f0, 0 0 40px #fff;
 }
 .intro-content .intro-position {
 	font-family: "lora-regular", serif;
@@ -2311,7 +2311,7 @@ header .logo a {
 	padding: 0 2rem;
 	margin: 0;
 	color: #FFFFFF;
-	background: #FF0077;
+	background: #090;
 }
 #contact form .form-field label::after {
 	position: absolute;
@@ -2320,7 +2320,7 @@ header .logo a {
 	margin-top: -6px;
 	border-top: 5px solid transparent;
 	border-bottom: 5px solid transparent;
-	border-right: 5px solid #FF0077;
+	border-right: 5px solid #090;
 	content: "";
 }
 #contact input[type="text"],
@@ -2342,7 +2342,7 @@ header .logo a {
 #contact input[type="text"]:focus,
 #contact input[type="password"]:focus,
 #contact input[type="email"]:focus {
-	border-color: #FF0077;
+	border-color: #0c0;
 	color: #FFFFFF;
 }
 #contact textarea {
@@ -2350,7 +2350,7 @@ header .logo a {
 	padding: 1.8rem 2rem;
 }
 #contact textarea:focus {
-	border-color: #FF0077;
+	border-color: #0c0;
 	color: #FFFFFF;
 }
 #contact button.submitform {
@@ -2380,7 +2380,7 @@ header .logo a {
 	color: #fa0003;
 }
 #message-success {
-	color: #FF0077;
+	color: #0a0;
 }
 #message-warning i, #message-success i {
 	margin-right: 10px;
