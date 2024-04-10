@@ -13,33 +13,47 @@
         <header>ACL Documentation</header>
         <ul>
             <li><a href="#Introduction" class="nav-link">Introduction</a></li>
-            <li><a href="#Prerequesites" class="nav-link">Prerequesites</a></li>
+            <li class="bb">Prerequesites</li>
             <li><a href="#Requirements" class="nav-link">Requirements</a></li>
-            <li><a href="#Components Used" class="nav-link">Components Used</a></li>
+            <li><a href="#Components" class="nav-link">Components Used</a></li>
             <li><a href="#Conventions" class="nav-link">Conventions</a></li>
             <li><a href="#Background" class="nav-link">Background Information</a></li>
+            <li class="bb">ACL Concepts</li>
+            <li><a href="#Masks" class="nav-link">Masks</a></li>
+            <li><a href="#Summarization" class="nav-link">ACL Summarization</a></li>
+            <li><a href="#Process" class="nav-link">Process ACLs</a></li>
+            <li><a href="#Ports" class="nav-link">Define Ports and Message Types</a></li>
+            <li><a href="#Apply" class="nav-link">Apply ACLs</a></li>
+            <li class="bb">Types of ACLs</li>
+            <li><a href="#Standard" class="nav-link">Standard ACLs</a></li>
+            <li><a href="#Extended" class="nav-link">Extended ACLs</a></li>
+            <li><a href="#IP" class="nav-link">IP</a></li>
+            <li><a href="#ICMP" class="nav-link">ICMP</a></li>
+            <li><a href="#TCP" class="nav-link">TCP</a></li>
+            <li><a href="#UDP" class="nav-link">UDP</a></li>
+            <li><a href="#End" class="nav-link">End</a></li>
         </ul>
     </nav>
     <main id="main-doc">
         <section class="main-section" id="Introduction">
-            <header>Introduction</header>
             <article>
+                <header>Introduction</header>
                 <p>
                     This document describes various types of IP Access Control Lists (ACLs) and how they can filter
                     network traffic.
                 </p>
             </article>
         </section>
-        <section class="main-section" id="Prerequesites"></section>
+        <h2>Prerequesites</h2>
         <section class="main-section" id="Requirements">
-            <header>Prerequesites</header>
+
             <article>
                 <header>Requirements</header>
                 <p>There are no specific prerequesites for this document. The concepts discussed are present in Cisco
                     IOS Software Releases 8.3 or later.</p>
             </article>
         </section>
-        <section class="main-section" id="Components Used">
+        <section class="main-section" id="Components">
             <article>
                 <header>Components Used</header>
                 <p>This document discusses various types of ACLs. Some of these are present since Cisco IOS Software
@@ -51,8 +65,9 @@
             </article>
         </section>
         <section class="main-section" id="Conventions">
-            <header>Conventions</header>
+
             <article>
+                <header>Conventions</header>
                 <p>
                     Refer to <a
                         href="https://www.cisco.com/c/en/us/support/docs/dial-access/asynchronous-connections/17016-techtip-conventions.html"
@@ -62,6 +77,15 @@
             </article>
         </section>
         <section class="main-section" id="Background">
+            <p class="note"><strong>Note:</strong> RFC 1700 contains assigned numbers of well-known ports.RFC 1918
+                contains address allocation
+                for private Internets, IP addresses which must not normally be seen on the
+                Internet.</p>
+            <p class="note"><strong>Note:</strong> Only registered Cisco users can access internal information.</p>
+            <p class="note"><strong>Note:</strong> ACLs can also be used to define traffic to Network Address Translate
+                (NAT), encrypt, or filter
+                non-IP protocols such as AppleTalk or IPX. A discussion of these functions is outside the scope of this
+                document.</p>
             <header>Background Information</header>
             <article>
                 <p>
@@ -71,6 +95,378 @@
                 </p>
             </article>
         </section>
+        <h2>ACL Concepts</h2>
+        <section class="main-section" id="Masks">
+            <header>Masks</header>
+            <article>
+                <p>Masks are used with IP addresses in IP ACLs to specify what must be permitted and denied. Masks in
+                    order to configure IP addresses on interfaces start with 255 and have the large values in the left
+                    side, for example, IP address 10.165.202.129 with a 255.255.255.224 mask. Masks for IP ACLs are the
+                    reverse, for example, masks 0.0.0.255. This is sometimes called an inverse mask or a wildcard mask.
+                    When the value of the mask is broken down into binary (0s and 1s), the results determine which
+                    address bits to consider when traffic is processed. A 0 indicates that the address bits must be
+                    considered (exact match); a 1 in the mask is a do not care. This table further explains the concept.
+                </p>
+                <table>
+                    <tr>
+                        <th>Masks Example</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>network address (traffic that is to be processed)</td>
+                        <td>10.1.1.0</td>
+                    </tr>
+                    <tr>
+                        <td>mask</td>
+                        <td>0.0.0.255</td>
+                    </tr>
+                    <tr>
+                        <td>network address (binary)</td>
+                        <td>00001010.00000001.00000001.00000000</td>
+                    </tr>
+                    <tr>
+                        <td>mask (binary)</td>
+                        <td>00000000.00000000.00000000.11111111</td>
+                    </tr>
+                </table>
+                <p>Based on the binary mask, you can see that the first three sets (octets) must match the given binary
+                    network address exactly (00001010.00000001.00000001). The last set of numbers are do not cares
+                    (.11111111). Therefore, all traffic that begins with 10.1.1. matches since the last octet is do not
+                    care. Therefore, with this mask, network addresses 10.1.1.1 through 10.1.1.255 (10.1.1.x) are
+                    processed.</p>
+                <p>Subtract the normal mask from 255.255.255.255 in order to determine the ACL inverse mask. In this
+                    example, the inverse mask is determined for network address 172.16.1.0 with a normal mask of
+                    255.255.255.0.</p>
+                <ul>
+                    <li>255.255.255.255 - 255.255.255.0 (normal mask) = 0.0.0.255 (inverse mask)</li>
+                </ul>
+                <p>Notice the ACL equivalents.</p>
+                <ul>
+                    <li>The source/wildcard of 0.0.0.0/255.255.255.255 means <strong>any</strong></li>
+                    <li>The source/wildcard of 10.1.1.2/0.0.0.0 is the same as host 10.1.1.2</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Summarization">
+            <header>ACL Summarization</header>
+            <article>
+                <p class="note"><strong>Note:</strong> Subnet masks can also be represented as a fixed length notation.
+                    For example, 192.168.10.0/24 represents 192.168.10.0 255.255.255.0.</p>
+                <p>This list describes how to summarize a range of networks into a single network for ACL optimization.
+                    Consider these networks.</p>
+                <pre style="font-family: 'Courier New', Courier, monospace;">
+                192.168.32.0/24
+                192.168.33.2/24
+                192.168.34.2/24
+                192.168.35.0/24
+                192.168.36.0/24
+                192.168.37.0/24
+                192.168.38.0/24
+                192.168.39.0/24
+                    </pre>
+                <p>The first two octets and the last octet are the same for each network. This table is an explanation
+                    of how to summarize these into a single network.</p>
+                <p>The third octet for the previous networks can be written as seen in this table, correspondent to the
+                    octet bit position and address value for each bit.</p>
+                <table class="sptable">
+                    <tr class="aa">
+                        <td><b>Decimal</b></td>
+                        <td>128</td>
+                        <td>64</td>
+                        <td>32</td>
+                        <td>16</td>
+                        <td>8</td>
+                        <td>4</td>
+                        <td>2</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td class=" aa">32</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td class="aa">33</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td class="aa">34</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td class="aa">35</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td class="aa">36</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td class="aa">37</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td class="aa">38</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td class="aa">39</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr class="aa">
+                        <td>Match?</td>
+                        <td>Y</td>
+                        <td>Y</td>
+                        <td>Y</td>
+                        <td>Y</td>
+                        <td>Y</td>
+                        <td>N</td>
+                        <td>N</td>
+                        <td>N</td>
+                    </tr>
+                </table>
+                <p>Since the first five bits match, the previous eight networks can be summarized into one network
+                    (192.168.32.0/21 or 192.168.32.0 255.255.248.0).</p>
+                <p>All eight possible combinations of the three low-order bits are relevant for the network ranges in
+                    question.</p>
+                <p>This command defines an ACL that permits this network. If you subtract 255.255.248.0 (normal mask)
+                    from 255.255.255.255, it yields 0.0.7.255.</p>
+                <code>access-list acl_permit permit ip 192.168.32.0 0.0.7.255</code>
+            </article>
+        </section>
+        <section class="main-section" id="Process">
+            <article>
+                <header>Process ACLs</header>
+                <p>Traffic that comes into the router is compared to ACL entries based on the order that the entries
+                    occur in the router. New statements are added to the end of the list. The router continues to look
+                    until it has a match. If no matches are found when the router reaches the end of the list, the
+                    traffic is denied. For this reason, you must have the frequently hit entries at the top of the list.
+                    There is an implied deny for traffic that is not permitted. A single-entry ACL with only one deny
+                    entry can deny all traffic. You must have at least one permit statement in an ACL or all traffic is
+                    blocked. These two ACLs (101 and 102) have the same effect.</p>
+                <code>!--- This command is used to permit IP traffic from 10.1.1.0
+                        !--- network to 172.16.1.0 network. All packets with a source 
+                        !--- address not in this range will be rejected.</code>
+                <code>access-list 101 permit ip 10.1.1.0 0.0.0.255 172.16.1.0 0.0.0.255
+                        </code>
+                <code>!--- This command is used to permit IP traffic from 10.1.1.0 
+                            !--- network to 172.16.1.0 network. All packets with a source
+                            !--- address not in this range will be rejected.</code>
+                <code>access-list 102 permit ip 10.1.1.0 0.0.0.255 172.16.1.0 0.0.0.255   
+                    access-list 102 deny ip any any </code>
+                <p>In the next example, the last entry is sufficient. You do not need the first three entries because IP
+                    includes TCP, User Datagram Protocol (UDP), and Internet Control Message Protocol (ICMP).</p>
+                <code>!--- This command is used to permit Telnet traffic 
+                        !--- from machine 10.1.1.2 to machine 172.16.1.1.</code>
+                <code>access-list 101 permit tcp host 10.1.1.2 host 172.16.1.1 eq telnet</code>
+                <code>!--- This command is used to permit tcp traffic from 
+                    !--- 10.1.1.2 host machine to 172.16.1.1 host machine.</code>
+                <code>access-list 101 permit tcp host 10.1.1.2 host 172.16.1.1</code>
+                <code>!--- This command is used to permit udp traffic from
+                    !--- 10.1.1.2 host machine to 172.16.1.1 host machine.
+                   </code>
+                <code>access-list 101 permit udp host 10.1.1.2 host 172.16.1.1</code>
+                <code>!--- This command is used to permit ip traffic from 
+                    !--- 10.1.1.0 network to 172.16.1.10 network.</code>
+                <code>access-list 101 permit ip 10.1.1.0 0.0.0.255 172.16.1.0 0.0.0.255</code>
+            </article>
+        </section>
+        <section class="main-section" id="Ports">
+            <article>
+                <header>Define Ports and Message Types</header>
+                <p>Not only can you define ACL source and destination, but you can also define ports, ICMP
+                    message types, and other parameters. A good source of information for well-known ports is
+                    <a href="https://www.ietf.org/rfc/rfc1700.txt?number=1700" target="_blank"
+                        rel="noopener nofollow noreferrer">RFC 1700</a> . ICMP message types are explained in <a
+                        href="https://www.ietf.org/rfc/rfc792.txt" target="_blank"
+                        rel="nofollow noreferrer noopener">RFC 792</a>.
+                </p>
+                <p>The router can display descriptive text on some of the well-known ports. Use
+                    a<strong>?</strong>for help.</p>
+                <code>access-list 102 permit tcp host 10.1.1.1 host 172.16.1.1 eq ?</code>
+                <pre>
+                        bgp             Border Gateway Protocol (179)
+                        chargen         Character Generator (19)
+                        cmd             Remote commands (rcmd, 514)
+                        </pre>
+                <p>During configuration, the router also converts numeric values to more user-friendly values.
+                    This is an example where you type the ICMP message type number, and it causes the router to
+                    convert the number to a name.</p>
+                <code>access-list 102 permit icmp host 10.1.1.1 host 172.16.1.1 14</code>
+                <p>becomes</p>
+                <code>access-list 102 permit icmp host 10.1.1.1 host 172.16.1.1 timestamp-reply</code>
+            </article>
+        </section>
+        <section class="main-section" id="Apply">
+            <article>
+                <header>Apply ACLs</header>
+                <p>You can define ACLs and still not apply them. But, the ACLs have no effect until they are
+                    applied to the interface of the router. It is a good practice to apply the ACL on the
+                    interface closest to the source of the traffic. As shown in this example, when you try to
+                    block traffic from source to destination, you can apply an inbound ACL to E0 on router A
+                    instead of an outbound list to E1 on router C. An access-list has adeny ip any implicitly at
+                    the end of any access-list. If traffic is related to a DHCP request and if it is not
+                    explicitly permitted, the traffic is dropped because when you look at DHCP request in IP,
+                    the source address is s=0.0.0.0 (Ethernet1/0), d=255.255.255.255, len 604, rcvd 2 UDP
+                    src=68, dst=67. Notice that the source IP address is 0.0.0.0 and destination address is
+                    255.255.255.255. Source port is 68 and destination 67. Therefore, you must permit this kind
+                    of traffic in your access-list or else the traffic is dropped due to implicit deny at the
+                    end of the statement.</p>
+                <p class="note"><strong>Note:</strong> For UDP traffic to pass through, UDP traffic must also be
+                    permitted explicitly by the ACL.</p>
+                <img src="/TechnicalDocumentationPage/images/apply1.png" alt="">
+            </article>
+        </section>
+        <section class="main-section" id="Types">
+            <h2>Types of ACLs</h2>
+            <article>
+                <header id="Standard">Standard ACLs</header>
+                <p>Standard ACLs are the oldest type of ACL. They date back to as early as Cisco IOS Software Release
+                    8.3. Standard ACLs control traffic by the comparison of the source address of the IP packets to the
+                    addresses configured in the ACL.</p>
+                <p>This is the command syntax format of a standard ACL.</p>
+                <code>access-list &lt;access-list-number&gt; {permit|deny} {host|source source-wildcard|any}</code>
+                <p>In all software releases, the access-list-number can be anything from 1 to 99. In Cisco IOS Software
+                    Release 12.0.1, standard ACLs begin to use additional numbers (1300 to 1999). These additional
+                    numbers are referred to as expanded IP ACLs. Cisco IOS Software Release 11.2 added the ability to
+                    use list name in standard ACLs.</p>
+                <p>A source/source-wildcard setting of 0.0.0.0/255.255.255.255 can be specified as any . The wildcard
+                    can be omitted if it is all zeros. Therefore, host 10.1.1.2 0.0.0.0 is the same as host 10.1.1.2.
+                </p>
+                <p>After the ACL is defined, it must be applied to the interface (inbound or outbound). In early
+                    software releases, out was the default when a keyword out or in was not specified. The direction
+                    must be specified in later software releases.</p>
+                <code>interface <b>interface-name</b>
+                    ip access-group number {in|out}</code>
+            </article>
+        </section>
+        <section class="main-section" id="Extended">
+            <header></header>
+            <article>
+                <header>Extended ACLs</header>
+                <p>Extended ACLs were introduced in Cisco IOS Software Release 8.3. Extended ACLs control traffic by the
+                    comparison of the source and destination addresses of the IP packets to the addresses configured in
+                    the ACL.</p>
+                <p>This is the command syntax format of extended ACLs.</p>
+                <h3 id="IP">IP</h3>
+                <code>access-list access-list-number
+                    [dynamic dynamic-name [timeout minutes]] 
+                    {deny|permit} protocol source source-wildcard destination destination-wildcard [precedence precedence] 
+                    [tos tos] [log|log-input] [time-range time-range-name]
+                </code>
+
+                <h3 id="ICMP">ICMP</h3>
+                <code>access-list access-list-number 
+                    [dynamic dynamic-name [timeout minutes]] 
+                    {deny|permit} icmp source source-wildcard destination destination-wildcard 
+                    [icmp-type [icmp-code] |icmp-message]
+                    [precedence precedence] [tos tos] [log|log-input] 
+                    [time-range time-range-name]</code>
+
+                <h3 id="TCP">TCP</h3>
+                <code>access-list access-list-number 
+                    [dynamic dynamic-name [timeout minutes]] 
+                    {deny|permit} tcp source source-wildcard [operator [port]]
+                    destination destination-wildcard [operator [port]] 
+                    [established] [precedence precedence] [tos tos] 
+                    [log|log-input] [time-range time-range-name]</code>
+
+                <h3 id="UDP">UDP</h3>
+                <code>access-list access-list-number 
+                    [dynamic dynamic-name [timeout minutes]] 
+                    {deny|permit} udp source source-wildcard [operator [port]] 
+                    destination destination-wildcard [operator [port]] 
+                    [precedence precedence] [tos tos] [log|log-input] 
+                    [time-range time-range-name]</code>
+
+                <p>In all software releases, the access-list-number can be 100 to 199. In Cisco IOS Software Release
+                    12.0.1, extended ACLs begin to use additional numbers (2000 to 2699). These additional numbers are
+                    referred to as expanded IP ACLs. Cisco IOS Software Release 11.2 added the ability to use list name
+                    in extended ACLs.</p>
+
+                <p>The value of 0.0.0.0/255.255.255.255 can be specified as any. After the ACL is defined, it must be
+                    applied to the interface (inbound or outbound). In early software releases, out was the default when
+                    a keyword out or in was not specified. The direction must be specified in later software releases.
+                </p>
+                <code><pre>interface &lt;interface-name&gt; 
+                ip access-group {number|name} {in|out} </pre></code>
+            </article>
+        </section>
+
+        <a href="#" class="toplink" title="Top" data-targetselector="body">
+            <span></span>
+            <img src="/TechnicalDocumentationPage/images/totop.svg" alt="Back to Top">
+        </a>
+        <hr>
+        <footer id="End">
+            <div class="container">
+                <div class="flex">
+                    <p>All information taken from <a href="https://cisco.com">cisco.com</a></p>
+                </div>
+
+                <div class="flex">
+                    <p>
+                        Link to full documentation can be found <a
+                            href="https://www.cisco.com/c/en/us/support/docs/security/ios-firewall/23602-confaccesslists.html#toc-hId--2010465938">here</a>.
+                    </p>
+                </div>
+            </div>
+        </footer>
     </main>
 </body>
 

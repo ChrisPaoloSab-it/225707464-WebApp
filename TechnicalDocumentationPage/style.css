@@ -127,3 +127,75 @@ code {
         min-width: 233px;
     }
 }
+
+h2 {
+    background-color: #9f9f9f;
+    color: #fff;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+table,
+tr,
+td {
+    border: 0.1px solid slategray;
+    text-align: center;
+    margin: 1%;
+    padding: 5px;
+}
+
+.note {
+    background-image: url(/TechnicalDocumentationPage/images/note.png);
+    background-repeat: no-repeat;
+    background-position: 2px 4px;
+    height: auto;
+    width: auto;
+    padding: 10px 5px 10px 35px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    overflow-x: hidden;
+    font-size: small;
+}
+
+.sptable {
+    border-collapse: collapse;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    justify-content: space-evenly
+}
+
+.aa {
+    background-color: #88ddff;
+}
+
+.toplink {
+    position: fixed; bottom: 15px;right: 90px; 
+    left: auto;
+}
+
+.bb {
+    background-color: #e2e2e2;
+    border-top: 1px solid;
+    list-style: none;
+    position:relative;
+    width: 100%;
+    padding: 10px 30px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    border: solid slategrey;
+    background-color: #88ddff;
+}
+
+.flex {
+    flex-flow: row;
+}
+
