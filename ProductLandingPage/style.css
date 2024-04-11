@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-flow: column;
+    align-content: center;
+    margin: 5%;
+    gap: 2px;
+}
+
+.box {
+    background-color: #322300;
+    color: #fff;
+    flex-flow: column;
+    flex-wrap: nowrap;
+    border: solid #abcdef;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+h1 {
+    font-weight: lighter;
+    color: #ff000e;
+}
