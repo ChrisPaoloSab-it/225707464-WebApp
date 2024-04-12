@@ -4,20 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Local Product</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Product Landing Page</title>
+    <link rel="stylesheet" href="/ProductLandingPage/style.css">
 </head>
 
 <body>
-
-
-    <div class="container">
-        <h1>Baguio's Finest Products</h1>
-        <p>Enjoy Baguio's Finest Products</p>
-        <div class="box">
-            Woodcarvings
+    <div id="page-wrapper">
+        <header id="header">
+            <div class="logo">
+                <img src="/ProductLandingPage/images/cropped-nardas.png" alt="" id="header-img">
+            </div>
+            <nav id="nav-bar">
+                <ul>
+                    <li><a href="">Products</a></li> <!--Video-->
+                    <li><a href="">Know More</a></li> <!--main site-->
+                    <li><a href="">For You</a></li> <!--products-->
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="container"></div>
+        <section id="hero">
+            <h2>High-Quality Local Products</h2>
+            <form action="https://www.freedcodecamp.org/email-submit" id="form">
+                <input name="email" id="email" placeholder="For inquiries, enter your email address" type="email">
+                <input type="submit" id="submit" value="Inquire!" class="btn">
+            </form>
+        </section>
+        <div class="container">
+            <section id="features">
+                <div class="grid">
+                    <div class="icon"></div>
+                    <div class="desc">
+                        <h2>Handmade Products</h2>
+                        <p>All products are made by indigenous craftswomen</p>
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="icon"></div>
+                    <div class="desc">
+                        <h2>Cordilleran Culture</h2>
+                        <p>Preserving the arts that have been passed down through generations</p>
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="icon"></div>
+                    <div class="desc">
+                        <h2>All Original Designs</h2>
+                        <p>The designs are uniquely Cordilleran</p>
+                    </div>
+                </div>
+            </section>
         </div>
-        <div class="box"><img src="/portfolio/images/inu.png" alt="dog lol"></div>
     </div>
 </body>
 
