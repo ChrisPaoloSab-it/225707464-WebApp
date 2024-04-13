@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Landing Page</title>
     <link rel="stylesheet" href="/ProductLandingPage/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
 </head>
 
 <body>
@@ -14,19 +16,20 @@
             <div class="logo">
                 <img src="/ProductLandingPage/images/cropped-nardas.png" alt="" id="header-img">
             </div>
+            
             <nav id="nav-bar">
                 <ul>
-                    <li><a href="">Products</a></li> <!--Video-->
-                    <li><a href="">Know More</a></li> <!--main site-->
-                    <li><a href="">For You</a></li> <!--products-->
+                    <li><a href="#prod">About</a></li> 
+                    <li><a href="#vids">Our Process</a></li> <!--Video-->
+                    <li><a href="#pricing">Products</a></li> <!--products-->
                 </ul>
             </nav>
         </header>
-        
+
         <div class="container"></div>
-        <section id="hero">
+        <section id="prod">
             <h2>High-Quality Local Products</h2>
-            <form action="https://www.freedcodecamp.org/email-submit" id="form">
+            <form action="https://www.freedcodecamp.com/email-submit" id="form">
                 <input name="email" id="email" placeholder="For inquiries, enter your email address" type="email">
                 <input type="submit" id="submit" value="Inquire!" class="btn">
             </form>
@@ -34,27 +37,84 @@
         <div class="container">
             <section id="features">
                 <div class="grid">
-                    <div class="icon"></div>
+                    <div class="icon">
+                        <i class="material-icons">star</i>
+                    </div>
                     <div class="desc">
                         <h2>Handmade Products</h2>
-                        <p>All products are made by indigenous craftswomen</p>
+                        <p>All products are made by indigenous craftswomen. <br>Discover the charm of our unique,
+                            handmade
+                            products, each crafted with love and a touch of tradition.<br>Experience the joy of owning a
+                            piece that is truly one-of-a-kind,
+                            just like you.</p>
                     </div>
                 </div>
                 <div class="grid">
-                    <div class="icon"></div>
+                    <div class="icon">
+                        <i class="material-icons">cloud</i>
+                    </div>
                     <div class="desc">
                         <h2>Cordilleran Culture</h2>
-                        <p>Preserving the arts that have been passed down through generations</p>
+                        <p>Preserving the arts that have been passed down through generations. <br>Immerse yourself in
+                            the rich heritage of the Cordilleras with our range of authentic Cordilleran products.</p>
                     </div>
                 </div>
                 <div class="grid">
-                    <div class="icon"></div>
+                    <div class="icon">
+                        <i class="material-icons">favorite</i>
+                    </div>
                     <div class="desc">
                         <h2>All Original Designs</h2>
-                        <p>The designs are uniquely Cordilleran</p>
+                        <p>The designs are uniquely Cordilleran. Each item tells a story of its own, reflecting the
+                            vibrant culture and meticulous
+                            craftsmanship of the Cordillera region.</p>
                     </div>
                 </div>
             </section>
+            <section id="vids">
+                <iframe width="601" height="338" src="https://www.youtube.com/embed/rQ4RpevI6sA"
+                    title="NARDAS WEAVING PROCESS" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </section>
+            <section id="pricing">
+                <div class="product" id="tenor">
+                    <div class="level">Bags</div>
+                    <h2>1750 PHP</h2>
+                    <ol>
+                        <li>Made with naturally sourced materials</li>
+                        <li>Durable</li>
+                        <li>Fade-proof</li>
+                    </ol>
+                    <button class="btn">Check</button>
+                </div>
+                <div class="product" id="tenor">
+                    <div class="level">Clothing</div>
+                    <h2>799 PHP</h2>
+                    <ol>
+                        <li>High quality dyes used</li>
+                        <li>Breathable fabrics</li>
+                    </ol>
+                    <button class="btn">Check</button>
+                </div>
+                <div class="product" id="tenor">
+                    <div class="level">Accessories</div>
+                    <h2>599 PHP</h2>
+                    <ol>
+                        <li>All natural materials</li>
+                        <li>Perfect for every home</li>
+                    </ol>
+                    <button class="btn">Check</button>
+                </div>
+            </section>
+           
+            <footer>
+                <ul>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </footer>
         </div>
     </div>
 </body>
