@@ -55,10 +55,14 @@ header {
     top: 0;
     min-height: 75px;
     padding: 0px 20px;
+    padding-bottom: 5px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: #eee;
+    background-image: url(/portfolio/images/portfolio/modals/m-sagada.jpg);
+    background-position:top;
+    background-size: 100%;
 }
 
 @media (max-width: 600px) {
@@ -300,7 +304,7 @@ footer {
 
 footer>ul {
     display: flex;
-    justify-content:space-evenly;
+    justify-content:flex-end;
 }
 
 footer>ul>li {
@@ -316,8 +320,23 @@ footer>span {
 }
 
 hr {
-    background-color: #ffc800;
+    background-color: rgba(30,40,70,0.4);
     height: 2px;
     width: 100%;
     border-color: transparent;
+}
+
+.ads {
+    height: 150px;
+    width: 150px;
+    padding: 11px;
+    background-color: rgba(0,0,200,0.1);
+    margin-top: 10px;
+}
+
+.fade {
+    margin-top: 5px;
+    color: rgba(30,40,70,0.4);
+    display: flex;
+    padding: 0px 10px;
 }
