@@ -13,9 +13,10 @@ hr {
 }
 
 .box{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    display:flex;
+    flex-wrap:nowrap;
+    justify-content: space-between;
+    column-gap: 100px
 }
 
 .item1, .item2, .item3 {
@@ -26,6 +27,8 @@ hr {
     text-align: center;
     background-color: transparent;
     justify-content: center;
+    flex-direction: column;
+    flex-flow: column;
 }
 
 a {
@@ -55,4 +58,8 @@ a {
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff;
     transition: 0.5s;
     transition-delay: 0.1s;
+ }
+
+ i {
+    color: white;
  }
