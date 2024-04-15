@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html_exercise</title>
+    <style>
+        body {
+            background-color: whitesmoke;
+        }
+
+        a {
+            list-style-type: none;
+            margin: 0;
+            padding: 9px 11px;
+            width: 60px;
+            overflow: hidden;
+            background-color: grey;
+            display: inline-block;
+            color: black;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        a.active {
+            background-color: forestgreen;
+            color: black;
+
+        }
+
+        a:hover {
+            background-color: green;
+            color: white;
+        }
+
+        input[type=text],
+        select {
+            width: 25%;
+            margin: 8px;
+            display: inline-block;
+            padding: 9px;
+            border: 2px;
+            border-radius: 4px;
+            box-sizing: border-box;
+            border-style: inset;
+        }
+
+        input[type=password],
+        select {
+            width: 25%;
+            margin: 8px;
+            display: inline-block;
+            padding: 9px;
+            border: 2px;
+            border-radius: 4px;
+            box-sizing: border-box;
+            border-style: inset;
+        }
+
+        input[type=submit] {
+            background-color: whitesmoke;
+            color: black;
+            padding: 10px 20px;
+            margin: 8px;
+            border: solid green;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: forestgreen;
+            color: white;
+            font-weight: bold;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a class="active" href="#">Home</a>
+            <a href="#">About us</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <hr>
+    <p style="font-weight: bold;">Image</p>
+    <img src="https://th.bing.com/th/id/OIP.VdEyljjfPrQOtdgdZ2MXIgHaEK?rs=1&pid=ImgDetMain" alt="duck" width="300">
+    <hr>
+    <p style="font-weight:bold;">Form</p>
+    <form>
+        <div>
+            <label for="uname" style="font-weight: bold;">Username:</label>
+            <input type="text" id="uname" name="username" placeholder="enter your username..." required minlength="8">
+            <br>
+            <label for="password" style="font-weight: bold;">Password:</label>
+            <input type="password" id="password" name="password" placeholder="enter your password..." required
+                minlength="8">
+
+            <p style="font-weight: bold;">Select your gender:</p>
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male">Male</label><br>
+
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label><br>
+
+            <br><input type="checkbox" name="terms" id="tnc">
+            <label for="tnc" style="font-weight: bold;">I accept the terms and conditions.</label>
+
+            <br><input type="submit" value="SUBMIT">
+        </div>
+    </form>
+
+
+    <hr>
+    <p style="font-weight: bold;">Table</p>
+    <table style="width:30%; text-align: center;">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>25</td>
+            <td>New York</td>
+        </tr>
+        <tr>
+            <td>Jane</td>
+            <td>30</td>
+            <td>Los Angeles</td>
+        </tr>
+    </table>
+    <hr>
+    <p style="font-weight: bold;">Audio</p>
+    <audio controls autoplay>
+        <source src="mixkit-crickets-and-insects-in-the-wild-ambience-39.wav" type="audio/wav">
+    </audio>
+    <hr>
+    <p style="font-weight: bold;">Video</p>
+    <video controls autoplay loop width="300" height="150">
+        <source src="peaceyo.mp4">
+    </video>
+
+    <hr>
+
+</body>
+
+</html>

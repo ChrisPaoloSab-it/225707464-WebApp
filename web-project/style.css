@@ -19,7 +19,7 @@ hr {
     column-gap: 100px
 }
 
-.item1, .item2, .item3 {
+.item1, .item2, .item3, .item4{
     width: 250px;
     height: 25px;
     margin: auto;
@@ -29,6 +29,10 @@ hr {
     justify-content: center;
     flex-direction: column;
     flex-flow: column;
+}
+
+.item1,.item2, .item3 {
+    order: 1;
 }
 
 a {
@@ -54,6 +58,13 @@ a {
  }
 
  div .item3 :hover {
+    color: white;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff;
+    transition: 0.5s;
+    transition-delay: 0.1s;
+ }
+
+ div .item4 :hover {
     color: white;
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff;
     transition: 0.5s;
